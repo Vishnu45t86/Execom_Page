@@ -1,0 +1,155 @@
+import './Execom_styles.css';
+import React from 'react';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import IconButton from '@mui/material/IconButton';
+import Abhiram from './assets/Abhiram.jpg';
+import Anandakrishnan from './assets/Anandakrishnan.jpg';
+import AdithyaKrishna from './assets/AdithyaKrishna.jpg';
+import JoelJohn from './assets/JoelJohn.jpg';
+import Manasi from './assets/Manasi.jpg';
+import Linda from './assets/Linda.jpg';
+import Vishnu from './assets/Vishnu.jpg';
+import Nandhana from './assets/Nandhana.jpg';
+import Anakha from './assets/Anakha.jpg';
+import Piyush from './assets/Piyush.jpg';
+import AdithyanR from './assets/AdithyanR.jpg';
+
+
+
+const generalMembers = [
+    { name: 'Anupam Kurien Mathew', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Bhadra S', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Ben Thomas', position: 'Chief Link Representative', image: null, linkedin: null },
+    { name: 'Mitra Prasannan', position: 'Technical Consultant', image: null, linkedin: null },
+    { name: 'Anandakrishnan K', position: 'Treasurer', image: Anandakrishnan, linkedin: null },
+    { name: 'Abhiram Sudharshanan', position: 'Vice chair', image: Abhiram, linkedin: null },
+    { name: 'Lakshmi priya ', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Kedar M Kamath', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Joel George John', position: 'Project Head', image: JoelJohn, linkedin: null },
+    { name: 'Adithya Krishna K', position: 'Technical Coordinator', image: AdithyaKrishna, linkedin: null },
+
+    { name: 'Ben Bejoy Kudiyirippil', position: 'Link Representative', image: null, linkedin: null },
+    { name: 'Kailas Nath', position: 'Membership Development Coordinator (MDC)', image: null, linkedin: null },
+    // { name: '', position: 'Webmaster', image: null },
+    { name: 'Vishnumaya S', position: 'Design Consultant', image: null, linkedin: null },
+    { name: 'Toms K Nixon', position: 'Design Head', image: null, linkedin: null },
+];
+const societyMembers_WIE = [
+
+    { name: 'Neha Anwar', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Manasi John Varghese', position: 'Vice Chairperson', image: Manasi, linkedin: null },
+    { name: 'Aileen Elsa Ajeesh', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Farah Fathima', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Swathy Krishna Sajeev', position: 'Technical Coordinator', image: null, linkedin: null },//do
+
+];
+const societyMembers_IAS = [
+
+    { name: 'Sanjana D V', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Pranav R Nair', position: 'Vice Chairperson', image: null, linkedin: null },
+    { name: 'Arvind Mahesh Iyer', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Hrithik B Karikkot', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Naureen Rukhiya', position: 'Technical Coordinator', image: null, linkedin: null },
+
+];
+const societyMembers_EDS = [
+
+    { name: 'Dan Mani Binu', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Linda Mary Zacharia', position: 'Vice Chairperson', image: Linda, linkedin: null },
+    { name: 'Afshan Abbas', position: 'Secretary', image: null, linkedin: null },//do over look
+    { name: 'Sourab M Kalliyan', position: 'Joint Secretary', image: null, linkedin: null },//
+    { name: 'Aabid Mohamed A', position: 'Technical Coordinator', image: null, linkedin: null },
+
+];
+const societyMembers_CS = [
+
+    { name: '', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Vishnu Mohan E S', position: 'Vice Chairperson', image: Vishnu, linkedin: null },
+    { name: '', position: 'Secretary', image: null, linkedin: null },
+    { name: '', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Rehan', position: 'Webmaster', image: null, linkedin: null },
+
+];
+const societyMembers_CAS = [
+
+    { name: 'Melvin Manoj', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Adithyan R', position: 'Vice Chairperson', image: AdithyanR, linkedin: null },
+    { name: 'Gautham Babu Maveli', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Anakha Pramod', position: 'Joint Secretary', image: Anakha, linkedin: null },
+    { name: 'Piyush Soni', position: 'Webmaster', image: Piyush, linkedin: null },
+
+];
+const societyMembers_SIGHT = [
+
+    { name: '', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Nandhana P', position: 'Vice Chairperson', image: Nandhana, linkedin: null },
+    { name: 'Tilottama Basu', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Akash E K', position: 'Treasurer', image: null, linkedin: null },
+    { name: 'Stuthy K Sudheer', position: 'Project Coordinator', image: null, linkedin: null },
+
+
+];
+const Content = ({ societyName, members }) => (
+    
+);
+const MembersGrid = ({ societyName, members }) => (
+
+    <Grid container spacing={3}>
+        <Typography variant="h6" component="h2" align="left" gutterBottom>
+            {societyName}
+        </Typography>
+        {members.map((member, index) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <CardMedia component="img" sx={{ height: 140 }} image={member.image} alt={member.name} />
+                    <CardContent sx={{ flexGrow: 1 }}>
+                        <Typography gutterBottom variant="h6" component="h2" align="left">
+                            {member.name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" align="left">
+                            {member.position}
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        {member.linkedin && (
+                            <IconButton href={member.linkedin} target="_blank" rel="noopener" size="small">
+                                <LinkedInIcon />
+                            </IconButton>
+                        )}
+                    </CardActions>
+                </Card>
+            </Grid>
+        ))}
+    </Grid>
+);
+
+const MeetTheTeam = () => (
+    <React.Fragment>
+        <CssBaseline />
+        <main>
+
+            <Container maxWidth="lg" sx={{ py: 8 }}>
+                <Stack spacing={3}>
+                    <MembersGrid societyName="General Members" members={generalMembers} />
+                    <MembersGrid societyName="Women in Engineering (WIE)" members={societyMembers_WIE} />
+                    <MembersGrid societyName="Industry Applications Society (IAS)" members={societyMembers_IAS} />
+                    <MembersGrid societyName="Engineering in Developing Societies (EDS)" members={societyMembers_EDS} />
+                    <MembersGrid societyName="Computer Society (CS)" members={societyMembers_CS} />
+                    <MembersGrid societyName="Cybersecurity and AI Society (CAS)" members={societyMembers_CAS} />
+                </Stack>
+            </Container>
+        </main>
+    </React.Fragment>
+);
+
+export default App;

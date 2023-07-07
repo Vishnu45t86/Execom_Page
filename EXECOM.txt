@@ -1,0 +1,335 @@
+import './Execom_styles.css';
+import React from 'react';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import IconButton from '@mui/material/IconButton';
+import Abhiram from './assets/Abhiram.jpg';
+import Anandakrishnan from './assets/Anandakrishnan.jpg';
+import AdithyaKrishna from './assets/AdithyaKrishna.jpg';
+import JoelJohn from './assets/JoelJohn.jpg';
+import Manasi from './assets/Manasi.jpg';
+import Linda from './assets/Linda.jpg';
+import Vishnu from './assets/Vishnu.jpg';
+import Nandhana from './assets/Nandhana.jpg';
+import Anakha from './assets/Anakha.jpg';
+import Piyush from './assets/Piyush.jpg';
+import AdithyanR from './assets/AdithyanR.jpg';
+
+
+
+const generalMembers = [
+    { name: 'Anupam Kurien Mathew', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Bhadra S', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Ben Thomas', position: 'Chief Link Representative', image: null, linkedin: null },
+    { name: 'Mitra Prasannan', position: 'Technical Consultant', image: null, linkedin: null },
+    { name: 'Anandakrishnan K', position: 'Treasurer', image: Anandakrishnan, linkedin: null },
+    { name: 'Abhiram Sudharshanan', position: 'Vice chair', image: Abhiram, linkedin: null },
+    { name: 'Lakshmi priya ', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Kedar M Kamath', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Joel George John', position: 'Project Head', image: JoelJohn, linkedin: null },
+    { name: 'Adithya Krishna K', position: 'Technical Coordinator', image: AdithyaKrishna, linkedin: null },
+
+    { name: 'Ben Bejoy Kudiyirippil', position: 'Link Representative', image: null, linkedin: null },
+    { name: 'Kailas Nath', position: 'Membership Development Coordinator (MDC)', image: null, linkedin: null },
+    // { name: '', position: 'Webmaster', image: null },
+    { name: 'Vishnumaya S', position: 'Design Consultant', image: null, linkedin: null },
+    { name: 'Toms K Nixon', position: 'Design Head', image: null, linkedin: null },
+];
+const societyMembers_WIE = [
+
+    { name: 'Neha Anwar', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Manasi John Varghese', position: 'Vice Chairperson', image: Manasi, linkedin: null },
+    { name: 'Aileen Elsa Ajeesh', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Farah Fathima', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Swathy Krishna Sajeev', position: 'Technical Coordinator', image: null, linkedin: null },//do
+
+];
+const societyMembers_IAS = [
+
+    { name: 'Sanjana D V', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Pranav R Nair', position: 'Vice Chairperson', image: null, linkedin: null },
+    { name: 'Arvind Mahesh Iyer', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Hrithik B Karikkot', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Naureen Rukhiya', position: 'Technical Coordinator', image: null, linkedin: null },
+
+];
+const societyMembers_EDS = [
+
+    { name: 'Dan Mani Binu', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Linda Mary Zacharia', position: 'Vice Chairperson', image: Linda, linkedin: null },
+    { name: 'Afshan Abbas', position: 'Secretary', image: null, linkedin: null },//do over look
+    { name: 'Sourab M Kalliyan', position: 'Joint Secretary', image: null, linkedin: null },//
+    { name: 'Aabid Mohamed A', position: 'Technical Coordinator', image: null, linkedin: null },
+
+];
+const societyMembers_CS = [
+
+    { name: '', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Vishnu Mohan E S', position: 'Vice Chairperson', image: Vishnu, linkedin: null },
+    { name: '', position: 'Secretary', image: null, linkedin: null },
+    { name: '', position: 'Joint Secretary', image: null, linkedin: null },
+    { name: 'Rehan', position: 'Webmaster', image: null, linkedin: null },
+
+];
+const societyMembers_CAS = [
+
+    { name: 'Melvin Manoj', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Adithyan R', position: 'Vice Chairperson', image: AdithyanR, linkedin: null },
+    { name: 'Gautham Babu Maveli', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Anakha Pramod', position: 'Joint Secretary', image: Anakha, linkedin: null },
+    { name: 'Piyush Soni', position: 'Webmaster', image: Piyush, linkedin: null },
+
+];
+const societyMembers_SIGHT = [
+
+    { name: '', position: 'Chairperson', image: null, linkedin: null },
+    { name: 'Nandhana P', position: 'Vice Chairperson', image: Nandhana, linkedin: null },
+    { name: 'Tilottama Basu', position: 'Secretary', image: null, linkedin: null },
+    { name: 'Akash E K', position: 'Treasurer', image: null, linkedin: null },
+    { name: 'Stuthy K Sudheer', position: 'Project Coordinator', image: null, linkedin: null },
+
+
+];
+
+const MeetTheTeam = () => {
+
+    return (
+        <>
+
+            <div className="team-page-background">
+                <div className="heading">
+                    <Container sx={{ py: 10 }} maxWidth="sm">
+                        <Typography
+                            component="h1"
+                            variant="h2"
+                            align="center"
+                            fontWeight="600"
+                            color="text.primary"
+                            gutterBottom
+                        >
+                            IEEE SB NITC
+                        </Typography>
+                        <Typography component="h1"
+                            variant="h3"
+                            align="center"
+                            fontWeight="400"
+                            color="text.primary"
+                            gutterBottom>
+                            EXECOM 2023-24
+                        </Typography>
+                        <Typography variant="h5" align="center" color="text.secondary" paragraph>
+                            "Where passion meets technology, we pave the way for engineering excellence."
+                        </Typography>
+                        <Stack
+                            sx={{ pt: 4 }}
+                            direction="row"
+                            spacing={2}
+                            justifyContent="center"
+                        >
+                            <Button variant="contained">Main call to action</Button>
+                            <Button variant="outlined">Secondary action</Button>
+                        </Stack>
+                    </Container>
+                </div >
+                <div className="meet-the-team">
+                    <CssBaseline />
+                    <Container maxWidth="lg" sx={{ py: 15 }}>
+                        <Typography
+                            component="h1"
+                            variant="h2"
+                            align="center"
+                            fontWeight="600"
+                            color="text.primary"
+                            gutterBottom
+                            sx={{ py: 4 }}
+                        >
+                            Meet the Team
+                        </Typography>
+                        {/* <Typography
+                            component="h1"
+                            variant="h2"
+                            align="center"
+                            fontWeight="600"
+                            color="#F5F5F7"
+                            gutterBottom
+                            sx={{ py: 2, border: '2px solid black', background: '#1D1D1F', borderRadius: '50px' }}
+
+                        >
+                            General Body
+                        </Typography> */}
+                        <Grid container spacing={4}>
+                            {generalMembers.map((member, index) => (
+                                <Grid item key={index} xs={12} sm={6} md={4}>
+                                    <Card
+                                        sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px' }} className="reveal-card"
+                                    >
+                                        <CardMedia
+                                            component="div"
+                                            sx={{
+                                                // height: '90%',
+                                                // // // 16:9 aspect ratio-75.25%
+                                                // pt: '66.66%',
+                                                // objectFit: 'contain',
+                                                // height: '0',
+                                                // paddingTop: '120%',
+                                                // paddingTop: '102%',
+                                                // objectFit: 'contain',
+                                                paddingTop: '0',
+                                                position: 'relative',
+                                                height: '0',
+                                                paddingTop: '120%',
+                                                // objectFit:'contain',
+                                            }}
+                                            // image={`https://source.unsplash.com/random?person-${index}`}
+                                            // image={member.image}
+                                            className='photo'
+                                        ><img
+                                                src={member.image}
+                                                alt={member.name}
+                                                style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    width: '100%',
+                                                    height: '107%',
+                                                    objectFit: 'cover',
+
+                                                    // padding:'5%',
+                                                    // borderRadius:'10%',
+                                                    borderRadius: '20px',
+                                                }}
+                                            />
+                                        </CardMedia>
+                                        <CardContent sx={{ flexGrow: 1, paddingTop: '40px' }} className="scrollable-content">
+                                            <Typography gutterBottom variant="h5" component="h2" fontWeight="600" className='Name' sx={{ marginBottom: '-10px' }}>
+                                                {member.name}
+                                                <IconButton className="iconButton" sx={{ paddingTop: '3px' }}>
+                                                    <LinkedInIcon fontSize="large" style={{ color: "#0077B5" }} />
+                                                </IconButton>
+                                            </Typography>
+
+                                            <Typography variant="h6" color="text.secondary" >
+                                                {member.position}
+                                            </Typography>
+                                        </CardContent>
+                                        {/* <CardActions>
+
+                                            <Button size="small">View Profile</Button>
+
+                                        </CardActions> */}
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Container>
+                </div>
+
+
+
+
+                <div className="society">
+                    <CssBaseline />
+                    <Container maxWidth="lg" sx={{ py: 15 }}>
+                        <Typography
+                            component="h1"
+                            variant="h2"
+                            align="center"
+                            fontWeight="600"
+                            color="text.primary"
+                            gutterBottom
+                            sx={{ py: 4 }}
+                        >
+                            Meet the Team
+                        </Typography>
+                        <Typography
+                            component="h1"
+                            variant="h2"
+                            align="center"
+                            fontWeight="600"
+                            color="#F5F5F7"
+                            gutterBottom
+                            sx={{ py: 2, border: '2px solid black', background: '#1D1D1F', borderRadius: '50px' }}
+
+                        >
+                            General Body
+                        </Typography>
+                        <Grid container spacing={4}>
+                            {societyMembers.map((member, index) => (
+                                <Grid item key={index} xs={12} sm={6} md={4}>
+                                    <Card
+                                        sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', borderRadius: '20px' }} className="reveal-card"
+                                    >
+                                        <CardMedia
+                                            component="div"
+                                            sx={{
+                                                // height: '90%',
+                                                // // // 16:9 aspect ratio-75.25%
+                                                // pt: '66.66%',
+                                                // objectFit: 'contain',
+                                                // height: '0',
+                                                // paddingTop: '120%',
+                                                // paddingTop: '102%',
+                                                // objectFit: 'contain',
+                                                paddingTop: '0',
+                                                position: 'relative',
+                                                height: '0',
+                                                paddingTop: '120%',
+                                            }}
+                                            // image={`https://source.unsplash.com/random?person-${index}`}
+                                            // image={member.image}
+                                            className='photo'
+                                        ><img
+                                                src={member.image}
+                                                alt={member.name}
+                                                style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                    // padding:'5%',
+                                                    // borderRadius:'10%',
+                                                    // borderRadius: '20px',
+                                                }}
+                                            />
+                                        </CardMedia>
+                                        <CardContent sx={{ flexGrow: 1 }} className="scrollable-content">
+                                            <Typography gutterBottom variant="h5" component="h2" fontWeight="600" className='Name'>
+                                                {member.name}
+                                                <IconButton className="iconButton">
+                                                    <LinkedInIcon fontSize="large" style={{ color: "#0077B5" }} />
+                                                </IconButton>
+                                            </Typography>
+
+                                            <Typography variant="h6" color="text.secondary">
+                                                {member.position}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions>
+
+                                            <Button size="small">View Profile</Button>
+
+                                        </CardActions>
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Container>
+                </div>
+            </div >
+
+        </>
+    );
+};
+
+export default MeetTheTeam;

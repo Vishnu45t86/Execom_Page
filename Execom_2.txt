@@ -1,0 +1,91 @@
+
+import './Execom_styles.css';
+import React from 'react';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import IconButton from '@mui/material/IconButton';
+import Abhiram from './assets/Abhiram.jpg';
+import Anandakrishnan from './assets/Anandakrishnan.jpg';
+import AdithyaKrishna from './assets/AdithyaKrishna.jpg';
+import JoelJohn from './assets/JoelJohn.jpg';
+import Manasi from './assets/Manasi.jpg';
+import Linda from './assets/Linda.jpg';
+import Vishnu from './assets/Vishnu.jpg';
+import Nandhana from './assets/Nandhana.jpg';
+import Anakha from './assets/Anakha.jpg';
+import Piyush from './assets/Piyush.jpg';
+import AdithyanR from './assets/AdithyanR.jpg';
+
+const generalMembers = [
+  { name: 'John Doe', position: 'Chairperson', image: null, linkedin: null },
+  { name: 'Jane Smith', position: 'Vice Chairperson', image: null, linkedin: null },
+  { name: 'David Johnson', position: 'Secretary', image: null, linkedin: null },
+  // ... other general members
+];
+
+const societyMembers_WIE = [
+  { name: 'Emily Davis', position: 'Chairperson', image: null, linkedin: null },
+  { name: 'Michael Brown', position: 'Vice Chairperson', image: null, linkedin: null },
+  { name: 'Sarah Johnson', position: 'Secretary', image: null, linkedin: null },
+  // ... other WIE members
+];
+
+// Define member data for other societies
+
+const societyMembers = {
+  General: generalMembers,
+  WIE: societyMembers_WIE,
+  // ... other societies
+};
+
+const SocietyMembersGrid = ({ societyName, members }) => (
+  <Grid container spacing={3}>
+    <Typography variant="h6" component="h2" align="left" gutterBottom>
+      {societyName}
+    </Typography>
+    {members.map((member, index) => (
+      <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+        <Card>
+          <CardMedia component="img" height="140" image={member.image} alt={member.name} />
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="h2" align="left">
+              {member.name}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" align="left">
+              {member.position}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            {member.linkedin && (
+              <IconButton href={member.linkedin} target="_blank" rel="noopener" size="small">
+                <LinkedInIcon />
+              </IconButton>
+            )}
+          </CardActions>
+        </Card>
+      </Grid>
+    ))}
+  </Grid>
+);
+
+const App = () => (
+  <div>
+    <Typography variant="h4" component="h1" align="center" gutterBottom>
+      Society Members
+    </Typography>
+    {Object.entries(societyMembers).map(([society, members]) => (
+      <SocietyMembersGrid key={society} societyName={society} members={members} />
+    ))}
+  </div>
+);
+
+export default App;
